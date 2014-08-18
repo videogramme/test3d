@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width">
+
+		<title>Cube Slam – Behind the THREE.Scene() | Inear</title>
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="http://www.inear.se/xmlrpc.php">
+
+		<link rel="shortcut icon" href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/icon.png">
+
+		<link rel="alternate" type="application/rss+xml" title="Inear » Feed" href="http://www.inear.se/feed/">
+<link rel="alternate" type="application/rss+xml" title="Inear » Comments Feed" href="http://www.inear.se/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Inear » Cube Slam – Behind the THREE.Scene() Comments Feed" href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/feed/">
+<link rel="stylesheet" id="flickr-gallery-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/flickr-gallery.css" type="text/css" media="all">
+<link rel="stylesheet" id="fg-jquery-ui-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery-ui-1.7.1.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-flightbox-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.flightbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="symple_shortcode_styles-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/symple_shortcodes_styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="metrofolio-google-fonts-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="metrofolio-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="shadowbox-css-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/shadowbox.css" type="text/css" media="screen">
+<link rel="stylesheet" id="shadowbox-extras-css" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/extras.css" type="text/css" media="screen">
+<script src="./Cube Slam – Behind the THREE.Scene()   Inear_files/cb=gapi.loaded_1" async=""></script><script src="./Cube Slam – Behind the THREE.Scene()   Inear_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/plusone.js" gapi_processed="true"></script><style type="text/css"></style>
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/widgets.js"></script>
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.js"></script>
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.flightbox.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.inear.se/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.inear.se/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Tornado" href="http://www.inear.se/2013/07/tornado/">
+<link rel="next" title="Plus &amp; Minus" href="http://www.inear.se/2013/10/plus-minus/">
+<meta name="generator" content="WordPress 3.5.2">
+<link rel="canonical" href="./Cube Slam – Behind the THREE.Scene()   Inear_files/Cube Slam – Behind the THREE.Scene()   Inear.htm">
+<link rel="shortlink" href="http://www.inear.se/?p=1203">
+
+
+	<!-- This site is based on the simple-portfolio plugin (wordpress 3.0+) -->
+	<!-- The plugin is created by Patrick Brouwer, Inlet -->
+	<!-- For more information see my blog: blog.inlet.nl or contact me: patrick@inlet.nl -->
+
+
+	<style>
+		html {
+			color: #898989;
+			background-color: #eff2ed;
+					}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: #6d6e76;
+		}
+
+		a,
+		.site-nav a:hover,
+		.site-nav a:active,
+		.site-nav a:focus {
+			color: #00a99d;
+		}
+		.post-tile:hover .portfolio-overlay,
+		.post-tile:focus .portfolio-overlay,
+		.post-tile:active .portfolio-overlay {
+			background-color: #00a99d;
+			background-color: rgba(0, 169, 157, 0.75);
+		}
+
+		a:hover,
+		a:active,
+		a:focus,
+		.site-title a:hover,
+		.site-title a:active,
+		.site-title a:focus,
+		.site-nav a {
+			color: #acacac;
+		}
+
+		.island,
+		.islet,
+		.page-head,
+		.content-primary,
+		.content-secondary,
+		.page-foot {
+			background-color: #ffffff;
+		}
+
+		input, textarea,
+		.wp-caption,
+		.sticky,
+		.comment.even,
+		.widget > ul a,
+		.widget > ul > li,
+		.widget_nav_menu a {
+			background-color: #f6f6f6;
+		}
+		blockquote,
+		table, th, td,
+		.comments-area,
+		.widget,
+		.content-secondary {
+			border-color: #f6f6f6;
+		}
+
+		
+		
+		pre {
+padding:10px;
+background-color:#efefef;
+overflow:auto;
+width:100%;
+border-radius: 7px;
+}	</style>
+	
+<script src="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.min.js" type="text/javascript"></script>
+<!--<script src="scripts/basic.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://www.inear.se/wp-content/themes/metrofolio/scripts/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.inear.se/wp-content/themes/metrofolio/scripts/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+
+<script src="http://www.inear.se/wp-content/themes/metrofolio/scripts/nivo-slider/nivosliderpack.js" type="text/javascript"></script>-->
+	<link type="text/css" rel="stylesheet" href="chrome-extension://dagdlcijhfbmgkjokkjicnnfimlebcll/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://dagdlcijhfbmgkjokkjicnnfimlebcll/page_context.js"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -90px !important;
+    width: 180px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+	<body class="single single-post postid-1203 single-format-standard wpb-js-composer js-comp-ver-3.6 vc_responsive" data-twttr-rendered="true" screen_capture_injected="true" cz-shortcut-listen="true">
+		<div class="container">
+			
+			<header class="page-head" role="banner">
+									<a class="site-logo" href="http://www.inear.se/" title="Inear" rel="home">
+						<!--<img src="http://www.inear.se/wp-content/uploads/2013/07/avatar1.jpg" alt="Inear logo">--><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/9afe828956b4daccc53f56a08ff32c47" alt="Inear logo">--&gt;
+					</a>
+				
+				<div class="site-branding">
+					<h1 class="site-title"><a href="http://www.inear.se/">Inear</a></h1>
+					<p class="site-description">I'm Einar Öberg, Developer and Technical Director at North Kingdom in Stockholm. This is my private space to publish some experiments and write-ups.</p>				</div>
+
+				<nav class="site-nav" role="navigation">
+					<div class="accessibility"><a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/#page-content" title="Skip to content">Skip to content</a></div>
+
+					<div class="site-nav__content">
+						<div class="nav-block">
+							
+								&nbsp;
+
+													</div>
+
+
+						
+					</div>
+
+					<div class="zilla-social size-32px"><a href="https://github.com/inear" class="GitHub"><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/GitHub.png" alt="GitHub"></a> <a href="https://plus.google.com/u/1/114004301012583596640" class="Google+"><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/Google+.png" alt="Google+"></a> <a href="http://se.linkedin.com/pub/einar-%C3%B6berg/13/338/2/" class="LinkedIn"><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/LinkedIn.png" alt="LinkedIn"></a> <a href="https://soundcloud.com/einar-berg-1" class="Soundcloud"><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/Soundcloud.png" alt="Soundcloud"></a> <a href="http://open.spotify.com/user/inear" class="Spotify"><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/Spotify.png" alt="Spotify"></a> <a href="http://twitter.com/inear" class="Twitter"><img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/Twitter.png" alt="Twitter"></a> </div>				</nav>
+			</header>
+
+			<div id="page-content" class="page-content">
+	<div class="content-primary" role="main">
+
+		
+			
+<article id="post-1203" class="post-1203 post type-post status-publish format-standard hentry category-3d category-webgl-2">
+	<header class="entry-header">
+		<h1 class="entry-title">Cube Slam – Behind the THREE.Scene()</h1>
+
+		<div class="entry-meta">
+			Posted on <a href="./Cube Slam – Behind the THREE.Scene()   Inear_files/Cube Slam – Behind the THREE.Scene()   Inear.htm" title="22:55" rel="bookmark"><time class="entry-date" datetime="2013-07-08T22:55:00+00:00">July 8, 2013</time></a>
+							<span class="sep">|</span>
+				<span class="cat-links">
+					<a href="http://www.inear.se/category/3d/" title="View all posts in 3D" rel="category tag">3D</a>, <a href="http://www.inear.se/category/webgl-2/" title="View all posts in WebGL" rel="category tag">WebGL</a>				</span>
+					</div>
+	</header>
+
+	<div class="entry-content">
+		<p><img class="alignnone  wp-image-1222" alt="image05" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image05-1024x468.jpg" width="100%"></p>
+<p><a href="http://cubeslam.com/" target="_blank">Cube Slam</a> is a online game conceived, designed &amp; built for Google Creative Lab that showcases the possibilities with the WebRTC API in a playful manner. We, North Kingdom, together with Public Class and Dinahmoe, shaped the creative concept, user experience, technical direction, design, art direction and production. It’s a Pong-like game, taken to next level. We added in physics, obstacles, extras and effects. But most importantly, you can invite friends to play face to face, peer to peer, in real-time with your webcam. The game logic communicating via RTCDataChannels and you and your friend can see each other inside the WebGL-powered world with the help of getUserMedia and RTCMediaStream. If you want to play the game alone, we have created Bob, our AI bear. Try to beat him, the longer you play the better he becomes. And you as well.</p>
+<p>As a Technical Director and developer on the project, it has been extremely educating, challenging and fun. I also got the chance to practice my WebGL skills for the first time in a real project, which was a huge opportunity, leaving the playground and make it for real. This blog has slowly faded away, but I’m glad to share this with you now, maybe I get time to make more stuff in this space.</p>
+<p>In this article I will, as the title implies, share some insights and tips from the process of making the WebGL related stuff with the 3d-engine three.js. I will also reveal some easter-eggs and show some prototypes and demos.</p>
+<h3>Devices and desktop fallback</h3>
+<p><img class="size-medium wp-image-1303 alignleft" alt="Screen Shot 2013-07-07 at 10.33.46 PM" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/Screen-Shot-2013-07-07-at-10.33.46-PM-300x158.png" width="300" height="158">Before we dive into the WebGL stuff I also want to mention the mobile version of the game, which Public Class pulled of with some CSS magic. We soon have WebGL and webRTC support in Chrome for Android (currently behind a flags and in beta) and hopefully other devices, but in the meantime we made a CSS version to reach as many users as possible. It’s still viewed in a 3D perspective but we are using sprite-sheets for the assets and CSS to position the elements.&nbsp;It runs smooth as long as hardware accelerated CSS-transitions is supported. It even runs in 60fps on a iPad 1, which is pretty amazing.</p>
+<p>The game-logic in the game is completely separated from the presentation layer. This makes it possible to provide with different renderers. We have a canvas renderer in 2d for debugging purposes, a CSS3-version for mobile and browsers without WebGL, and a full blown version with three.js for those with support. Three.js has built-in support for different renderers like canvas and CSS, but we chose to build a CSS-version from scratch to make use of the features in the best way.</p>
+<p>It turned out, many players have not noticed they are running the fallback version, since it’s still 3d and the gameplay is the same. But as long as they enjoyed it, it’s fine I guess. IE is still not supported though, since CSS3D is not fully implemented. Our approach needed nested 3d layers &nbsp;with inherited perspective for it to work and IE does not support that currently. I’m so happy that they decided to jump on board the WebGL train with IE11, so there is hope for IE users.</p>
+<h2>Creating the world</h2>
+<p>So here we go, lets start with the scene and how it’s built. The world is quite simple, in the low-poly style we have used in many of our earlier projects at North Kingdom. To make it a bit &nbsp;dynamic (and fun to program) I aimed at creating some elements procedurally to make each game unique. In the end pretty much everything is static meshes, but it really helped in the process of creating the world.</p>
+<h3>Terrain</h3>
+<p>The terrain in the distance is made of regular planes that is manipulated with the help of Perlin noise. Pretty redundant but a fun detail is that the mountains is random each time you visit the page. To avoid the faces to look like a grid when just offsetting the vertices of a plane I first added a random value to the vertex in the x- and z-direction, then merged some vertices if the distance between them was close enough and finally offsetting along the y-axis. Three different planes with the same process is added, but with different parameters, to create the different levels of terrain. The terrain closest to the arena needed to look more nature-like so that is a hand modeled mesh. We also have animals walking on the mesh, so a static model makes it easier to optimize away some raycasting when attaching them to the surface.</p>
+<p><img class="alignnone  wp-image-1230" alt="image13" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image13-1024x585.png" width="100%"></p>
+<h3>Forest</h3>
+<p>Trees are also distributed using Perlin noise, but the computation-time to place the trees on the terrain was too long when initiating the game. The method was used to generate the final distribution, but instead to save the position of the trees to an array that can be parsed during runtime. If I want to have another forest I can just regenerate the data. Since it’s just built with primitives, there is no need to load external models, just the positions to plot them out. I added a tool to create a new forest in the settings-panel if you want to try it out. Beware, it take some time to parse if it’s too many trees, mainly because of the ray-casting calculation. For better performance all trees is merged into a single geometry so there is only one draw-call for all the trees. And one call for the shadow-planes. The shadow is aligned to the normal of the collision-point (also saved during the generating), but I could not get 100% accuracy with the rotation, that’s why the shadows is sometimes colliding with the triangle underneath, which is also the case if the plane intersect a neighbouring triangle that is positioned higher.<br>
+<img class="alignnone  wp-image-1219" alt="image02" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image02-1024x546.png" width="100%"></p>
+<h3>Animals</h3>
+<p>These little fellows were fun to work with. So much personality in just a few polygons.</p>
+<p>Here is an example of two ways to control a morph-animation. By manually setting the play-head or play it as an ordinary animation. Move your mouse to make the bear look, and click to trigger a little animation.</p>
+<p><iframe style="border: none; height: 360px; width: 620px; margin-top: 10px; margin-bottom: 10px;" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/saved_resource(1).htm" height="360" width="620"></iframe></p>
+<p>And here are all animals, click to look closer and swap between them.</p>
+<p><iframe style="border: none; height: 300px; width: 620px; margin-top: 10px; margin-bottom: 10px;" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/saved_resource.htm" height="300" width="620"></iframe></p>
+<p>To make them blend in nicely in the environment I did a little trick with the texturing. The texture does not contain the final colors, instead we store different information in them and doing the colouring in the shader. The texture look like this:</p>
+<p><img class="alignleft" alt="image09" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image09-300x300.jpg" width="300" height="300">Red channel for diffuse amount, green for ambient and blue for the white details on the animals. With these parameters we can change the diffuse color (including shadows and ambient occlusion) and making the terrain reflect colors on selected areas of the mesh and keep the white details like the nose or wings the same. We don’t calculate any light on these animals so the coloring is pretty cheap. Try to change the color of the terrain in the settings-panel and notice how the animals blend into the nature when the color changes. A downside is that the animations are not reflected in the lighting, so shadows are static on the mesh. All animals share the same texture so one material to rule them all.</p>
+<pre><code>uniform sampler2D map;
+uniform vec3 ambient;
+uniform vec3 details;
+uniform vec3 diffuse;
+varying vec2 vUv;
+
+void main() {
+
+  gl_FragColor = vec4(1.0);
+
+  vec4 texelColor = texture2D( map, vUv );
+  vec3 bodyColor = (diffuse*texelColor.r*0.3+(texelColor.g*ambient));
+  gl_FragColor = vec4( bodyColor + vec3(step(0.9,texelColor.b)*details)*bodyColor*8.0,1.0);
+
+  gl_FragColor.xyz = sqrt( gl_FragColor.xyz );
+
+}</code></pre>
+<p>Here is the result, notice how the are blended with the color of the terrain.</p>
+<p><img class="alignnone  wp-image-1223" alt="image06" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image06.jpg" width="100%"></p>
+<p>To make them walk and fly around, TweenMax and TimelineMax from <a title="GSAP: Professional-Grade HTML5 Animation" href="http://www.greensock.com/gsap-js/" target="_blank">GreenSock</a> has a nifty feature to animate objects along a spline made of control-points. I also wanted them to walk on the surface of the terrain so I saved a list of the raycasted y-positions during one loop. Next time those values are used instead.</p>
+<pre><code>var tl = new TimelineLite({paused:true});
+tl.append( TweenMax.to(this.dummie, 1, {bezier:{values:this.controlPoints, autoRotate:["x","z","rotation",-Math.PI*2,true]}, ease: Linear.easeNone}) );
+
+//3d-line for debugging path
+var beziers = BezierPlugin.bezierThrough(this.path,1,true);
+var line = new THREE.Line(new THREE.Geometry(), new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 1, linewidth: 1 } ) );
+scene.add(line)</code></pre>
+<h3>The arena</h3>
+<p>This is created with simple planes and boxes. In the beginning of the project we were able to set all dimensions with settings during runtime. Later, when we found a good balance, dimensions were locked and the settings-option was taken away so we could adjust the surroundings. Most work was put into the reflections. Lots of trying out stuff like environment-maps, transparency, depth-sorting issues. More about that in the reflections-section below.</p>
+<h2><img alt="image10" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image10-1024x487.jpg" width="100%"></h2>
+<h3>Bob</h3>
+<p>Bob the Bear. He became a annoying friend during development. As his teacher and trainer, I’m kind of proud of him now, at the time writing this, over&nbsp;2 million players have met him <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_smile.gif" alt=":)" class="wp-smiley"> . He’s using a mix of morph-animations (idle loop, blinking, morph-frame expressions and triggered animations) and transforms (shaking, walking out, focusing or follow ball etc).</p>
+<div class="symple-column symple-one-half symple-column-first ">
+<img class="alignnone size-medium wp-image-1259" alt="hal" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/hal-300x193.jpg" width="300" height="193"><br>
+</div>
+<div class="symple-column symple-one-half symple-column-last ">An early exploration experimenting with expressions using transforms. Press the walkOut-button with the HAL-character, I love that animation <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_smile.gif" alt=":)" class="wp-smiley">  <a href="http://www.inear.se/cubeslam-demos/cpu/" target="_blank">http://www.inear.se/cubeslam-demos/cpu/</a></div>
+<div class="symple-column symple-one-half symple-column-first ">
+<img class="alignnone size-medium wp-image-1264" alt="bob-exp" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/bob-exp-300x193.jpg" width="300" height="193"><br>
+</div>
+<div class="symple-column symple-one-half symple-column-last ">Here is a demo where you can control Bobs expressions:<a title="The Language of Bob the Bear" href="http://www.inear.se/cubeslam-demos/bob/" target="_blank">http://www.inear.se/cubeslam-demos/bob/</a></div>
+<div class="symple-clear-floats"></div>
+<h2><span style="font-size: 1.17em;">Video destruction</span></h2>
+<p><img class="alignnone  wp-image-1272" alt="destroy" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/destroy.jpg" width="100%"></p>
+<p>When you hit the opponent screen the display is partly destroyed, and when you win the game it is shattered into pieces. I tried some different approaches:</p>
+<p>Screen front made up of small tiles that fall apart: (same demo as one of the above, but this time focus on the video-screen and see how it breaks when you click it):</p>
+<p><a title="video destruction demo 1" href="http://www.inear.se/cubeslam-demos/cpu" target="_blank">http://www.inear.se/cubeslam-demos/cpu</a></p>
+<p>Cubes falling apart:</p>
+<p><a title="video destruction demo 2" href="http://www.inear.se/cubeslam-demos/cpu2" target="_blank">http://www.inear.se/cubeslam-demos/cpu2</a></p>
+<p>Cubes with real physics (slow)</p>
+<p><a title="video destruction demo 3" href="http://www.inear.se/cubeslam-demos/cpu3" target="_blank">http://www.inear.se/cubeslam-demos/cpu3</a></p>
+<p>Animated cubes</p>
+<p><a title="video destruction demo 4" href="http://www.inear.se/cubeslam-demos/cpu4/" target="_blank">http://www.inear.se/cubeslam-demos/cpu4/</a></p>
+<p><a title="video destruction demo 5" href="http://www.inear.se/cubeslam-demos/cpu5/" target="_blank">http://www.inear.se/cubeslam-demos/cpu5/</a></p>
+<p><a title="video destruction demo 6" href="http://www.inear.se/cubeslam-demos/cpu6/" target="_blank">http://www.inear.se/cubeslam-demos/cpu6/</a></p>
+<h2>Reflections</h2>
+<p>If you have noticed, the table is slightly reflective. This is done with a mix of simple tricks. We are not dealing with ray-traced rendering here so we have to use geometry and shaders. One way could be to use the stencil buffer while rendering to use the floor as a mask and invert all the geometry along the y-axis. Instead, the floor is made of a box where we create our local clear-color so to speak. The top is transparent and the inner sides has the same color, but opaque, so it will act like its part of the floor plane. Now, geometry put inside this box will look as reflections if we adjust the transparency in the floor, without the need of extra draw-calls. The pucks, paddles and obstacles is just twice as high with the center point at the level of the floor, so no need for multiple geometry there. And animating the height is automatically correct. The extras-icons is a bit more special. These floating objects is duplicated and put underneath the floor. Since the bouncy animation is handled in the vertex-shader we can just invert the y-scale, and the mesh will animate correctly.</p>
+<p>The video-box reflection is also reflected in the floor. This box moves up and down, so the reflection can not just be an inverted geometry, it looks wrong if the reflection-box just scales. Instead, it has to be the same height as the visible part of the box, but without distorting the uv:s. A plane with the same material as the video in the cube is placed under the floor, inside the reflection-box mentioned above. Then the uv-coordinates is adjusted to match the face of the box above while animating. For a nice gradient fade a second plane is placed in front, just a couple of units away. I could do this in a shader but I wanted to reuse the material in the video-cube. The trick here is to make this gradient the same color as the floor, so it blends with the reflection-box. A canvas is created and a gradient filled rectangle is drawn with the floor diffuse color and alphas ranging from 0 to 1. I struggled a bit with alpha here and the solution might not be best in class, but when dealing with transparent objects and depth sorting I always get into strange iterations, sometimes it works and I keep it.</p>
+<p>It’s hardly noticed, but an extra gradient is added into the bottom area of the video-screen to reflect back the floor color.</p>
+<p>Seen from above:</p>
+<p><img class="alignnone  wp-image-1224" alt="image07" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image07-1024x549.png" width="100%"></p>
+<p>Seen from inside the reflection box:</p>
+<p><img class="alignnone  wp-image-1228" alt="image11" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image11-1024x540.png" width="100%"></p>
+<h2></h2>
+<h2></h2>
+<h2>Optimising performance</h2>
+<p>Performance was really important because we needed to make room for the game-engine and especially the webRTC encoding/decoding. I can mention some of the things I implemented:</p>
+<h4>Disabling anti-aliasing</h4>
+<p>An obvious one. This parameter has been toggled on/off many times during the development. I really wanted to have it enabled, because the many straight lines that squared-shaped objects creating, is looking pretty jagged, especially with all the slow camera movements. But the performance on slower machines made us take the decision to turn it off by default. Too bad you can’t toggle anti-aliasing during runtime.</p>
+<h4>Anti-aliasing substitute trick</h4>
+<p>When having simple planes, with just a basic color-material and no anti-aliasing, it looked better to use a texture instead and having a small padding in the texture. Then the smooth edge is created by the fragment-shader. So instead of having the graphics right to the edge of the texture, add a small space before the edge to allow the texture-filtering to create a smooth edge for you. Maybe not great for performance with extra texture lookups, but it’s always a balance. The whole arena could have been a model with a single texture, but I wanted full and dynamic control of all dimensions and elements.</p>
+<p><img class="alignnone  wp-image-1225" alt="image08" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image08-1024x595.png" width="100%"></p>
+<h4>Post-effects alternatives</h4>
+<p>Post rendering effects were also too slow to implement when the frame-budget was so restrictive. But we do have an overlay rendered on top of the scene, the dusty tape-texture and a scanline effect (the lines was removed in the final version, but optional in the settings menu). This would naturally be added in a post-effect stage. Instead we used a plane that is added as a child of the camera, placed at a z-position with a specific scale to match the screen (thanks mr.Doob for the advice). Note that the plane will be part of the depth writing so be careful in which distance you place the plane and if you have geometry close to your camera, otherwise the fragments will be overwritten by your scene. Without depth-writing, you need to be sure the plane is drawn last to the screen. One limitation is that you don’t have access to the pre-rendered scene, so effects like depth-of-field, blur or color-correction are not possible.</p>
+<h4>Multiple render targets</h4>
+<p>Some of the effects needed more render targets. A render target is a canvas that we render to, and you can have ones that are not displayed on screen, and use them as a texture in your main scene. The camera that records Bob for example. That is a separate scene, rendered separately and sent as input to the video-box shader. Adjusting the resolution of the separate render-target is important for performance so we don’t render more pixels than we need. And set generateMipMap to false if the texture is not power of two.</p>
+<p><img class="alignnone  wp-image-1221" alt="image04" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image04.jpg" width="100%"></p>
+<p>The mirror effect is also using a render target of it’s own. You can try the effect by pressing “M” in the game. The scene is rendered to this a render target and put as a texture on a plane that matches the screen size which we can animate. When the transition is completed the body-tag is styled with a “transform scaleX(-1)” and we can switch to regular render-mode again. A bonus is that all the html is inverted as well. Try it out, but it’s really hard to play, so add <a href="http://cubeslam.com/?god" target="_blank">?god</a> to the url to keep playing.</p>
+<h4><span style="font-size: 1em;">Garbage and object pooling</span></h4>
+<p>Keeping the garbage collector as calm as possible is very important. The GC will always have stuff to do even with highly optimized code, but avoid unnecessary garbage. A basic example; instead of creating&nbsp;<em>new THREE.Vector3()</em>&nbsp;when you position objects each frame, use&nbsp;<em>.set(x,y,z)</em>&nbsp;on the existing object instead.&nbsp;And use object pooling. For common objects, allocate as much of them that you know you will use up front and save and reuse objects that you know will appear again. Allocate more objects by extending the pool automatically, or perhaps in a state where it’s not that equally important with a steady framerate, like right after you get game over or between rounds. Not everything needs to be pooled, sometimes it’s better to let the GC take care of them. It’s a balance, and measuring is the key. You can also put in a console.warn each if you allocate more than a fixed threshold and you can quickly see if there is a potential leak.</p>
+<h4>Mini tutorial 1: Making a simple pool</h4>
+<pre><code>function Pool(C,size){
+  var totalPooled = size || 1;
+  var freeList = [];
+
+  function expand(howMany){
+    console.warn('pool expand %s: %s',C.name,howMany)
+    for(var i=0; i &amp;lt; howMany; i++ ){
+      freeList[i] = new C;
+    }
+    totalPooled += howMany;
+  }
+
+  expand(totalPooled)
+
+  C.alloc = function(){
+    if( freeList.length &amp;lt; 1 ){
+      expand(totalPooled) // *= 2
+    }
+    var instance = freeList.pop();
+    instance.alloc &amp;amp;&amp;amp; instance.alloc()
+    return instance;
+  }
+
+  C.free = function(instance){
+    instance.free &amp;amp;&amp;amp; instance.free()
+    freeList.push(instance)
+  }
+}</code></pre>
+<p>To use it just wrap your function with the Pool-function like this.</p>
+<pre><code>var MyObject = {}
+pool(MyObject, 5);</code></pre>
+<p>Then the methods alloc and free are available. So instead of using var myObject=new MyObject(), use:</p>
+<pre><code>var myObject = MyObject.alloc();</code></pre>
+<p>and the pool will return a new or a recycled object. To give it back to the pool run:</p>
+<pre><code>MyObject.free(myObject);</code></pre>
+<p>Remember to reset stuff before you return it or when initiating it, it’s easy to forget that the instance have the variables and previous state inside it.</p>
+<h4>Mini tutorial 2: Making a scaleable frame</h4>
+<p>Some little tips regarding the overlay-texture. If you want an overlay to act like a frame, you can use a 9-slice-scale trick with the vertices and the UVs on a plane geometry with 9 faces. You can then lower the texture-size and make the plane match full screen, and still keep the ratio of the borders.</p>
+<p>Here is the result rendered with a UV debug texture, notice the fixed margin values:</p>
+<p><img class="alignnone  wp-image-1244" alt="Screen Shot 2013-07-05 at 10.11.09 PM" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/Screen-Shot-2013-07-05-at-10.11.09-PM.png" width="100%"></p>
+<p>To see how it behaves in action, <a title="Frame scaling" href="http://inear.se/cubeslam-demos/frame/" target="_blank">try this demo</a>. The texture used then look like this:</p>
+<p><img class="alignnone  wp-image-1217" alt="image00" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image00-1024x640.jpg" width="100%" height="0"></p>
+<p><span style="font-size: 1em;">Some code:</span></p>
+<p>Create the plane:</p>
+<pre><code>var planeGeo = new THREE.PlaneGeometry(100,100,3,3);
+var uvs = planeGeo.faceVertexUvs[0];
+
+/*
+face-index:      vertex-index:   uv-mapping:
+-------------    1---2           0,1 --- 1,1
+| 0 | 1 | 2 |    |  /|              |  /|
+-------------    | / |              | / |
+| 3 | 4 | 5 |    |/  |              |/  |
+-------------    0---3           0,0 --- 1,0
+| 6 | 7 | 8 |
+-------------
+*/
+
+var marginTop = 0.1
+  , marginLeft = marginTop
+  , marginBottom = 0.9
+  , marginRight = marginBottom;
+
+//center face
+var face = uvs[4];
+face[0].x = face[1].x = marginLeft;
+face[0].y = face[3].y = marginRight;
+face[1].y = face[2].y = marginTop;
+face[2].x = face[3].x = marginBottom;
+
+//top left
+face = uvs[0];
+face[0].x = face[1].x = 0;
+face[0].y = face[3].y = 1;
+face[1].y = face[2].y = marginRight;
+face[2].x = face[3].x = marginLeft;
+
+//top right
+face = uvs[2];
+face[0].x = face[1].x = marginBottom;
+face[0].y = face[2].x = 1;
+face[1].y = face[2].y = marginRight;
+face[3].x = face[3].y = 1;
+
+//top center
+face = uvs[1];
+face[0].x = face[1].x =marginLeft;
+face[0].y = face[3].y =1;
+face[1].y = face[2].y = marginRight;
+face[2].x = face[3].x = marginBottom;
+
+//bottom left
+face = uvs[6];
+face[0].x = face[1].x = 0;
+face[0].y = face[3].y = marginTop;
+face[1].y = face[2].y = 0;
+face[2].x = face[3].x = marginLeft;
+
+//bottom center
+face = uvs[7];
+face[0].x = face[1].x = marginLeft;
+face[0].y = face[3].y = marginTop;
+face[1].y = face[2].y = 0;
+face[2].x = face[3].x = marginBottom;
+
+//top bottom
+face = uvs[8];
+face[0].x = face[1].x = marginBottom;
+face[0].y = face[3].y = marginTop;
+face[1].y = face[2].y = 0;
+face[2].x = face[3].x = 1;
+
+//center left
+face = uvs[3];
+face[0].x = face[1].x = 0;
+face[0].y = face[3].y = marginRight;
+face[1].y = face[2].y = marginTop;
+face[2].x = face[3].x = marginLeft;
+
+//center right
+face = uvs[5];
+face[0].x = face[1].x = marginBottom;
+face[0].y = face[3].y = marginRight;
+face[1].y = face[2].y = marginTop;
+face[2].x = face[3].x = 1;
+
+planeGeo.uvsNeedUpdate = true;
+
+var plane = new THREE.Mesh(planeGeo, Materials.overlay )
+camera.add(plane);</code></pre>
+<p>And scale and position the plane on init and window resize:</p>
+<pre><code>var w = window.innerWidth
+, h = window.innerHeight
+, cornerDistW = 50-texture_width/10/w*100
+, cornerDistH = 50-texture_height/10/h*100;
+this.overlay.scale.set( w/1000, h/1000,1);
+
+this.overlay.position.z = -h*0.1 /(2*Math.tan( this.cameraController.camera.fov*(Math.PI/360)) );
+
+var verts = this.overlay.geometry.vertices;
+verts[1].x = -cornerDistW;
+verts[5].x = -cornerDistW;
+verts[9].x = -cornerDistW;
+verts[13].x = -cornerDistW;
+
+verts[2].x = cornerDistW;
+verts[6].x = cornerDistW;
+verts[10].x = cornerDistW;
+verts[14].x = cornerDistW;
+
+//height
+verts[4].y = cornerDistH;
+verts[5].y = cornerDistH;
+verts[6].y = cornerDistH;
+verts[7].y = cornerDistH;
+
+verts[8].y = -cornerDistH;
+verts[9].y = -cornerDistH;
+verts[10].y = -cornerDistH;
+verts[11].y = -cornerDistH;
+
+this.overlay.geometry.verticesNeedUpdate = true;</code></pre>
+<p>Try&nbsp;<a href="http://cubeslam.com/" target="_blank">the game</a>&nbsp;to see how the final result looks like.</p>
+<h2></h2>
+<h2>Optimizing workflow</h2>
+<h3>3d assets</h3>
+<p>One thing that can be really repetitive is to convert and load 3d-models. There is numerous ways of doing this, but in this setup we exported obj-files from 3d Studio Max, and converted them with the python script that is available as a standalone command line tool. So to make life easier we added this command to the build process and the folder with models to the watch list to monitor changes, so when dropping a file in the folder it automatically created the json-model. We took it even a couple of steps further and stringified it and converted it as a js-file that could be added as a module in requirejs. So drop a file, register it in packages.json and the model was automatically referenced as an object ready to be used in the application without the need of loading it during runtime.</p>
+<p>The same setup with shader-files, a folder with glsl-files was easy referenced as shortcuts in the material-module.</p>
+<h3>Settings panel and querystrings</h3>
+<p>Building tools to streamline the workflow is really important, everyone making applications and games know that. It can be a hidden menu, keyboard shortcuts, querystrings/deeplinking, build processes or anything that makes you test quicker or collaborate smoother.</p>
+<p>Like adding this to the URL: “?level=4&amp;extras=multiball,extralife&amp;god&amp;play&amp;dev”. That loads the game on level 4, jumps straight to gameplay, makes you and Bob immortal, spawning the extras you want to debug and showing the settings-panel. A time saver indeed, and good to be able to send around to clients or team-mates, or letting designers try the new specific asset quickly. We also using a debug component in each module. And we can select a query to choose what to output, like this: ?d=networking:webrtc. No need to adding and removing console.logs all the time. And handy to send a URL with a selected query to the client and ask for the result in the console.</p>
+<p>The dat.GUI settings panel have also been really helpful.</p>
+<p><img class="alignnone  wp-image-1229" alt="image12" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image12-1024x246.gif" width="100%"></p>
+<p>With that we could adjust colors, lights, gameplay params, camera-settings and more in real-time. Try for yourself with the <a href="http://cubeslam.com/?dev" target="_blank">?dev</a> querystring.</p>
+<p>Some of the settings also bind to a key. In the game, try to select thedifferent cameras by pressing 1-5. Or press E and H to preview the explosion/heal effect. Or perhaps stresstest the physics by enable God Mode in the menu and press “Create Puck” or hit the P.</p>
+<p><img class="alignnone  wp-image-1218" alt="image01" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/image01-1024x632.jpg" width="100%"></p>
+<h2></h2>
+<h2>Early prototypes</h2>
+<p>Well, what I just explained so far is what we ended up doing in the project, graphics wise. To get to that point the process was, as always, full of iterations and changes, trial and most of all errors. When we started the project the idea was based around motion tracking as input control. We started to explore that as primary control plus a secondary control with mouse or keyboard. We got the&nbsp;motion-tracking&nbsp;working ok, but not good enough. And as the game was progressing it was more and more about speed and accuracy, which wasn’t really playing well with the lack of precision with motion tracking in general. Problems related to camera processing, lighting conditions and noise, was too severe and not as stable that the wider public would rightfully expect. It also did not feel intuitive and simple enough to select a tracking-color, or learning the boundaries of the motion area. With more forgiving gameplay, or a better feature/color-tracking, and the right visual feedback, it might still be feasible. But there is another problem that we would have tackled if we took that path. The logic to keep the game in sync in two player mode depend on delta-movements, like saying ‘I moved the mouse in this direction with this speed’, which works well with touch and keyboard, but less optional with direct controls like mouse or a position of an object in your webcam. For the latter you need to send the exact position every frame causing bloated data traffic. And it makes it harder to interpolate/extrapolate the game to hide latency. So I’m glad we took the decision to steer away from motion-tracking, even though I spend almost a month waving in the air with random colourful objects.</p>
+<p>Here is some of the early test-prototypes. To process the image and isolate the movement I use a modified version of <a href="http://evanw.github.io/glfx.js/yymef2oIySegcvzxeHaDg&bvm=bv.48705608,d.bGE" target="_blank">glfx.js</a>.&nbsp;Don’t miss to allow webcam, it’s not that good UX in these demos. Also, be sure to select a good tracking-color by clicking in the video monitor up in the left corner. No game-logic here, just color-tracking exploration:</p>
+<p>Air-hockey:<br>
+<a title="Motion Air hockey" href="http://www.inear.se/cubeslam-demos/motion-1/" target="_blank">http://www.inear.se/cubeslam-demos/motion-1/</a></p>
+<p><a href="http://www.inear.se/cubeslam-demos/motion-1/"><img alt="motion-demo-1" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/motion-demo-1-1024x625.jpg" width="100%"></a></p>
+<p>Ping-pong-pong:<br>
+<a title="Ping-Pong" href="http://www.inear.se/cubeslam-demos/motion-2/" target="_blank">http://www.inear.se/cubeslam-demos/motion-2/</a></p>
+<p><a href="http://www.inear.se/cubeslam-demos/motion-2/"><img class="alignnone  wp-image-1252" alt="motion-demo-2" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/motion-demo-2-1024x623.jpg" width="100%"></a></p>
+<p>3d-pong<br>
+<a title="3D motion Pong" href="http://www.inear.se/cubeslam-demos/motion-3/" target="_blank">http://www.inear.se/cubeslam-demos/motion-3/</a></p>
+<p><a href="http://www.inear.se/cubeslam-demos/motion-3/"><img alt="motion-demo-3" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/motion-demo-3-1024x625.jpg" width="100%"></a></p>
+<h2>Extras</h2>
+<p>Most of the available easter-eggs is available is the dev-menu up in the left corner when you append ?dev to the url, or click this link: <a href="https://cubeslam.com/?dev" target="_blank">http://cubeslam.com?dev</a>. But there is some more, so I created <a title="Cheats" href="https://www.cubeslam.com/cheats.html" target="_blank">this page</a> for some more info. Another thing you might not know, is that you can run the WebGL version on your device if you go to this url: <a href="http://cubeslam.com/?quality=mobile">http://cubeslam.com?quality=mobile</a>. There are other flags you can enable for even more fun, but more on that in a forthcoming version <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_wink.gif" alt=";)" class="wp-smiley"> </p>
+<h2>Credits</h2>
+<p>There is a bunch of people at North Kingdom that made this come true, but I want to send some extra love to the guys at&nbsp;<a href="http://publicclass.se/">Public Class</a>&nbsp;that made most of the heavy code lifting. They made the framework, took lead on the game engine, did html5 front-end, did magic in the mobile game, handled webRTC, set up TURN servers, coded backend in the Go language! They have really shown their dedication and their excellent skills, working their asses off during a long time, and for that I’m really happy, so hats off to you guys! Love you!</p>
+<p><a href="http://www.dinahmoe.com/">Dinahmoe</a> did also a excellent work as always, reinventing themselves over and over. Next time you play the game, take some time to really listen to the original music and the effects. Feel how responsive and dynamic it is, reacting to everything you do, and always on the beat.</p>
+<p>Thanks to all the folks at Google that has given us the opportunity and helped on with this amazing project!</p>
+<p>Also, many thanks to all gamers! Over 2 million visitors in a month!</p>
+<div style="height:33px; padding-top:2px; padding-bottom:2px; clear:both;" class="vas_pro_2"><div style="float:left; width:100px; " class="vas_pro_2_facebook_like"> 
+				<iframe src="./Cube Slam – Behind the THREE.Scene()   Inear_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:27px;" allowtransparency="true"></iframe>
+			</div><div style="float:left; width:90px; padding-left:10px;" class="vas_pro_2_google1"> 
+				<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1408372269256" name="I0_1408372269256" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+			</div><div style="float:left; width:110px; padding-left:10px;" class="vas_pro_2_twitter"> 
+				<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/tweet_button.1407888064.htm" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 110px; height: 20px;"></iframe> 
+			</div></div>
+			</div>
+
+	<footer class="entry-meta">
+			</footer>
+</article>
+
+			
+	<nav role="navigation" id="nav-below" class="post-nav">
+		<h1 class="accessibility">Post navigation</h1>
+
+		
+			<div class="nav-previous"><a href="http://www.inear.se/2013/07/tornado/" rel="prev"><span class="meta-nav">←</span> Tornado</a></div>			<div class="nav-next"><a href="http://www.inear.se/2013/10/plus-minus/" rel="next">Plus &amp; Minus <span class="meta-nav">→</span></a></div>
+		
+	</nav>
+
+	
+			
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			Comments (13)		</h2>
+
+		
+		<ol class="comment-list">
+				<li class="comment even thread-even depth-1" id="li-comment-1322">
+		<article id="comment-1322" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/47c0e4fbcb488f1f462b206db0a477f0" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn">Arthur</cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1322"><time datetime="2013-07-09T10:39:00+00:00">
+					July 9, 2013 at 10:39					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Thanks a lot for this article, very interesting.<br>
+A little question, why are you using a “canvas renderer in 2d for debugging ” instead of the 3d one (under three.js) ?</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1331">
+		<article id="comment-1331" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/a0c3c51d81a7e1c98284ab173b9d381d" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.peteroshaughnessy.com/" rel="external nofollow" class="url">Peter O'Shaughnessy</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1331"><time datetime="2013-07-09T14:30:56+00:00">
+					July 9, 2013 at 14:30					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>This is a fantastic write-up – thank you. Lots of great tips!</p>
+<p>The bit I’m most especially interested in is the mobile version using CSS3. I’ve tried Three.js’s CSS3DRenderer, but I’d be keen to check out anything that might be more lightweight or performant for mobile.</p>
+<p>I’ve checked out the source code for CubeSlam and found a symlink at public/javascript/renderer-css.js. But it points to ../../build/build-css.js, which isn’t actually in the repository? Has that been intentionally omitted?</p>
+<p>Even if there’s no source code I could look at, I’d be grateful for any advice you have for where to start with the CSS3 renderer side of things.</p>
+<p>Thanks,<br>
+Peter</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment even thread-even depth-1" id="li-comment-1332">
+		<article id="comment-1332" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/a0c3c51d81a7e1c98284ab173b9d381d" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.peteroshaughnessy.com/" rel="external nofollow" class="url">Peter O'Shaughnessy</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1332"><time datetime="2013-07-09T14:36:04+00:00">
+					July 9, 2013 at 14:36					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Sorry – I’m such an idiot – realised a minute after posting that that I obviously needed to ‘make’ it first!</p>
+<p>I’m taking a better look at the code now <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1333">
+		<article id="comment-1333" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/9afe828956b4daccc53f56a08ff32c47(1)" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.inear.se/" rel="external nofollow" class="url">inear</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1333"><time datetime="2013-07-09T14:36:09+00:00">
+					July 9, 2013 at 14:36					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>@Arthur: Yes, it’s a simple canvas where we write all the shapes and objects. It was really useful for testing physics and collision detection, and much faster to see that all dimensions and math is correct. For multiplayer we could layer both users worlds, and the synced one to see the difference and that data was sent correctly. Try pressing ’0′(zero) in the game and you will see what I mean <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1335">
+		<article id="comment-1335" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/9afe828956b4daccc53f56a08ff32c47(1)" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.inear.se/" rel="external nofollow" class="url">inear</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1335"><time datetime="2013-07-09T14:43:55+00:00">
+					July 9, 2013 at 14:43					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Hi! Thanks for great feedback! All source is there, the symlink just points to the build, and that should be compiled when forking and building the project. You find all files regarding the mobile version in the folder lib/renderer-css. The CSS stuff is in the folder stylesheets/mobile (written in Stylus)</p>
+<p>It’s not a CSS-renderer per se, it’s just regular positioning of objects. The main trick is that we use images and sprite-sheets with pre-rendered graphics. So we don’t have a “engine” that is reusable, it’s just hacks to trick the perspective <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1336">
+		<article id="comment-1336" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/9afe828956b4daccc53f56a08ff32c47(1)" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.inear.se/" rel="external nofollow" class="url">inear</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1336"><time datetime="2013-07-09T14:45:05+00:00">
+					July 9, 2013 at 14:45					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>@Peter O’Shaughnessy: Nice, I answered before reading your second comment. Let me know if you need anything else.</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment even thread-even depth-1" id="li-comment-1337">
+		<article id="comment-1337" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/a0c3c51d81a7e1c98284ab173b9d381d" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.peteroshaughnessy.com/" rel="external nofollow" class="url">Peter O'Shaughnessy</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1337"><time datetime="2013-07-09T14:48:57+00:00">
+					July 9, 2013 at 14:48					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Aha – I was expecting something more like a lightweight CSS3D engine, but that makes sense, thanks!</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1341">
+		<article id="comment-1341" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/3ce3855f059c1eea934e5316d5c22181" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn">Aaron McLeod</cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1341"><time datetime="2013-07-09T17:55:06+00:00">
+					July 9, 2013 at 17:55					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>One minor complaint about the blog itself. I found the text very hard to read with the colour being so light. I changed the color on the html tag using chrome dev tools to #444 and it became much more readable.</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment even thread-even depth-1" id="li-comment-1373">
+		<article id="comment-1373" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/a3010d42542d17b15fb9d6eabed7008e" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://willem-mulder.nl/" rel="external nofollow" class="url">Willem Mulder</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-1373"><time datetime="2013-07-10T11:42:51+00:00">
+					July 10, 2013 at 11:42					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Thanks for the write-up! It’s always great to understand why and how things were created. That’s where we learn <img src="./Cube Slam – Behind the THREE.Scene()   Inear_files/icon_smile.gif" alt=":-)" class="wp-smiley"> </p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2461">
+		<article id="comment-2461" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/f060b53dd18010b7167d5a0b505c8f78" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://onedayitwillmake.com/" rel="external nofollow" class="url">mario gonzalez</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-2461"><time datetime="2013-08-24T20:08:48+00:00">
+					August 24, 2013 at 20:08					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Great write up!<br>
+@aaron I think the text is just fine to read, and I prefer the lower contrast.</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment even thread-even depth-1" id="li-comment-2791">
+		<article id="comment-2791" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/e04d73ef6440659b6477bc72474a24dd" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn">farhad</cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-2791"><time datetime="2014-02-24T16:29:49+00:00">
+					February 24, 2014 at 16:29					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>hello</p>
+<p>I am  beginner in webgl and three.js </p>
+<p>I create a web page and use webgl to create 3d element such as cubes,cylinders,…</p>
+<p>now need create a webcam texture into it as background and everyone that visit this page can view my webcam video online and live such as your BOB</p>
+<p>can you help me please</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-2792">
+		<article id="comment-2792" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/9afe828956b4daccc53f56a08ff32c47(1)" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn"><a href="http://www.inear.se/" rel="external nofollow" class="url">inear</a></cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-2792"><time datetime="2014-02-24T18:38:39+00:00">
+					February 24, 2014 at 18:38					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>Publishing the webcam-feed to the public is a bit complicated and involves serverside setup or some services. WebRTC as is used in cubeslam is not intended as large scale broadcasting. If you want to connect only two persons it is manageable and there is examples on the net for that such as: <a href="https://apprtc.appspot.com/" rel="nofollow">https://apprtc.appspot.com/</a></p>
+<p>I advice you to play with video-textures first, check out this tutorial: <a href="http://learningthreejs.com/blog/2012/02/07/live-video-in-webgl/" rel="nofollow">http://learningthreejs.com/blog/2012/02/07/live-video-in-webgl/</a></p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+	<li class="comment even thread-even depth-1" id="li-comment-2793">
+		<article id="comment-2793" class="comment">
+			<footer>
+				<img alt="" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/e04d73ef6440659b6477bc72474a24dd" class="avatar avatar-80 photo" height="80" width="80">
+				<div class="comment-author vcard">
+					<cite class="fn">farhad</cite>				</div>
+
+				<div class="comment-meta commentmetadata">
+					<a href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/comment-page-1/#comment-2793"><time datetime="2014-02-25T07:53:33+00:00">
+					February 25, 2014 at 07:53					</time></a>
+				</div>
+			</footer>
+
+			<div class="comment-content">
+				
+				<p>a lot thanks</p>
+<p>can you say me how to use <a href="https://apprtc.appspot.com/" rel="nofollow">https://apprtc.appspot.com/</a> between two persons</p>
+			</div>
+
+			<div class="reply">
+				
+							</div>
+		</article>
+
+	</li>
+		</ol>
+
+		
+	
+	
+									<div id="respond">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.inear.se/2013/07/cube-slam-behind-the-three-scene/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.inear.se/wp-comments-post.php" method="post" id="commentform">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="1203" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+											</form>
+							</div><!-- #respond -->
+						
+</div>
+
+		
+	</div>
+
+	<aside class="content-secondary" role="complementary">
+		
+				<div id="recent-posts-3" class="widget widget_recent_entries">		<h1 class="widget-title">Recent posts</h1>		<ul>
+					<li>
+				<a href="http://www.inear.se/2014/03/urban-jungle-street-view/" title="Urban Jungle Street View – Behind the scenes">Urban Jungle Street View – Behind the scenes</a>
+						</li>
+					<li>
+				<a href="http://www.inear.se/2014/01/snowroller/" title="Snowroller">Snowroller</a>
+						</li>
+					<li>
+				<a href="http://www.inear.se/2013/10/plus-minus/" title="Plus &amp; Minus">Plus &amp; Minus</a>
+						</li>
+					<li>
+				<a href="./Cube Slam – Behind the THREE.Scene()   Inear_files/Cube Slam – Behind the THREE.Scene()   Inear.htm" title="Cube Slam – Behind the THREE.Scene()">Cube Slam – Behind the THREE.Scene()</a>
+						</li>
+					<li>
+				<a href="http://www.inear.se/2013/07/tornado/" title="Tornado">Tornado</a>
+						</li>
+				</ul>
+		</div>	</aside>
+
+	</div>
+
+	<footer class="page-foot" role="contentinfo">
+		
+		
+		<p>
+			<span class="copyright">©2013</span>
+			
+		</p>
+	</footer>
+</div>
+
+			<script type="text/javascript">
+				jQuery(document).ready(function(){
+					jQuery("img.flickr.square,img.flickr.thumbnail,img.flickr.small").flightbox();
+				});
+			</script>
+		
+<!-- Begin Shadowbox JS -->
+<script type="text/javascript">
+	var shadowbox_conf = {
+		animate: true,
+		animateFade: true,
+		animSequence: "sync",
+		autoDimensions: false,
+		modal: false,
+		showOverlay: true,
+		overlayColor: "#000",
+		overlayOpacity: 0.8,
+		flashBgColor: "#000000",
+		autoplayMovies: true,
+		showMovieControls: true,
+		slideshowDelay: 0,
+		resizeDuration: 0.35,
+		fadeDuration: 0.35,
+		displayNav: true,
+		continuous: false,
+		displayCounter: true,
+		counterType: "default",
+		counterLimit: 10,
+		viewportPadding: 20,
+		handleOversize: "resize",
+		handleUnsupported: "link",
+		initialHeight: 160,
+		initialWidth: 320,
+		enableKeys: true,
+		skipSetup: false,
+		flashParams: {bgcolor:"#000000", allowFullScreen:true, wmode:"opaque"},
+		flashVars: {},
+		flashVersion: "10.0.0"
+
+	};
+	Shadowbox.init(shadowbox_conf);
+</script>
+<!-- End Shadowbox JS -->
+
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/admin-ajax.php"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Cube Slam – Behind the THREE.Scene()   Inear_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-181266-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+<iframe name="oauth2relay265540689" id="oauth2relay265540689" src="./Cube Slam – Behind the THREE.Scene()   Inear_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

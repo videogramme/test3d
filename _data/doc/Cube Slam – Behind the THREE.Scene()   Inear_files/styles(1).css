@@ -1,0 +1,155 @@
+html,body {
+	margin:0;
+	padding:0;
+	width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+    text-align: center;
+	overflow:hidden;
+}
+
+#controlPanel {
+	position: absolute;
+	z-index:100;
+	left:20px;
+	top:20px;
+	width: 350px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 10px 10px 10px 10px;
+}
+
+#colorSelectContainer {
+	z-index:0;
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-240px;
+	margin-left:-320px;
+	width: 640px;
+   	height:480px;
+}
+
+#colorSelectArea {
+	position:absolute;
+	width:100px;
+	height:100px;
+	left: 450px;
+	top:80px;
+	border: 10px solid red;
+	z-index:30;
+}
+
+#colorSelectCenter {
+	position:absolute;
+	display: block;
+	left:50%;
+	top:50%;
+	margin-left:-5px;
+	margin-top:-5px;
+	width:10px;
+	height:10px;
+	border: 1px solid black; 
+	border-radius: 5px 5px 5px 5px;
+	z-index:31;
+}
+
+#marker {
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:350px;
+	background-color: #ff0000; 
+	border-radius: 10px 10px 10px 10px;
+	z-index:390;
+}
+
+#videoInput {
+	/*display:none;
+*/
+
+    left:5px;
+    margin-top: 15px;
+   -webkit-transform: scale(-1,1);
+   width: 640px;
+   height:480px;
+   border-radius: 8px 8px 8px 8px;
+
+}
+
+
+
+#videoInputCanvas {
+
+	left:5px;
+    margin-top: 15px;
+   -webkit-transform: scale(-1,1);
+   width: 320px;
+   height:240px;
+   border-radius: 8px 8px 8px 8px;
+}
+
+#uiContainer {
+	margin-left:10px;
+}
+
+.videoLabel {
+	width:360px;
+	text-align: center;
+	font-family: verdana;
+	font-size:11px;
+	color: #999999;
+	margin: 5px 0 10px 0;
+}
+
+.monitorLabel {
+	width:160px;
+	text-align: center;
+	font-family: verdana;
+	font-size:11px;
+	color: #999999;
+	margin: 5px 0 10px 0;
+}
+
+#fxMonitors {
+	width: 340px;
+	margin-top:30px;
+	
+}
+
+.monitor {
+	height:120px;
+	width:160px;
+	border: 1px solid #222222;
+	background-color: rgba(0,0,0,0.8);
+}
+
+#monitorFinalBlobs {
+	position:absolute;
+	z-index:10;
+}
+
+#monitorFinalResult {
+	position:absolute;
+	z-index:8;
+}
+
+#column1 {
+	margin-left: 10px;
+	width:160px;
+	float: left;
+}
+
+#column2  {
+	width:160px;
+	margin-left:10px;
+	float: left;
+}
+
+#monitorFinalContainer {
+	width:160px;
+	margin:auto;
+	text-align: center;
+	clear:both;
+}

@@ -1,0 +1,88 @@
+
+<!-- saved from url=(0051)http://froosky.rwell.org/graphosaurus/examples/eve/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Graphosaurus demo: Eve Online Map</title>
+  <style>
+    #frame {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+<style type="text/css"></style><link type="text/css" rel="stylesheet" href="chrome-extension://dagdlcijhfbmgkjokkjicnnfimlebcll/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://dagdlcijhfbmgkjokkjicnnfimlebcll/page_context.js"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -90px !important;
+    width: 180px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body screen_capture_injected="true" cz-shortcut-listen="true">
+
+<div id="frame"><canvas width="1479" height="781"></canvas></div>
+
+<script src="./Graphosaurus demo  Eve Online Map_files/graphosaurus.min.js"></script>
+<script src="./Graphosaurus demo  Eve Online Map_files/eve-data.js"></script>
+<script>
+var securityColor = function (security) {
+  var color;
+  security = Math.floor(security * 10 / 2);
+
+  switch (security) {
+    case -5: color = 0xf00000; break;
+    case -4: color = 0xd73000; break;
+    case -3: color = 0xf04800; break;
+    case -2: color = 0xf06000; break;
+    case -1: color = 0xd77700; break;
+    case -0: color = 0xefef00; break;
+    case  1: color = 0x8fef2f; break;
+    case  2: color = 0x00f000; break;
+    case  3: color = 0x00ef47; break;
+    case  4: color = 0x48f0c0; break;
+    case  5: color = 0x2fefef; break;
+    default: color = 0xffffff;
+  }
+
+  return color;
+};
+
+graph = G.graph({
+  nodeImage: "disc.png",
+  nodeImageTransparent: true,
+  antialias: true,
+  bgColor: "black",
+  edgeWidth: 1.5,
+});
+
+for (var i = 0; i < eve.systems.length; i++) {
+  var system = eve.systems[i];
+  var systemId = system[0];
+  var coords = system.slice(1,4);
+  var security = system[4];
+
+  G.node(coords, {
+    id: systemId,
+    color: securityColor(security),
+  }).addTo(graph);
+}
+
+for (var i = 0; i < eve.relations.length; i++) {
+  G.edge(eve.relations[i], {
+    color: 0x0000aa,
+  }).addTo(graph);
+}
+
+graph.renderIn('frame');
+</script>
+
+
+</body></html>
